@@ -1,0 +1,29 @@
+{% extends './a-index.html' %}
+
+{% block title %} Preguntas {% endblock %}
+{% block body %}
+<h1 style="text-align: center;">Seccion de Preguntas</h1>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h1>Preguntas</h1>
+        <div class="table-responsive">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Pregunta: </th>
+                    </tr>
+                    <tbody>
+                        {% for leng in ques %}
+                        <tr>
+                            <td>{{loop.index}}</td>
+                            <td>{{leng}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
